@@ -30,4 +30,6 @@ jobs:
           python -m py_compile Calculator.py
 
       - name: Ejecutar tests
+        env:
+          PYTHONPATH: ${{ github.workspace }}
         run: pytest -q
